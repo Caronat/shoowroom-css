@@ -1,0 +1,64 @@
+section#carousel-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 120px;
+  padding: 10px 0;
+  background: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .carousel-menu {
+    width: 180px;
+    height: 60px;
+    perspective: 1000px;
+
+    .carousel {
+      width: 100%;
+      height: 100%;
+      transform: translateZ(-218px);
+      transform-style: preserve-3d;
+      transition: transform 1s;
+
+      .carousel-cell {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backface-visibility: hidden;
+        background: $white;
+        color: $black;
+        cursor: pointer;
+
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            transform: rotateY(#{(($i)-1) * 360/7}deg) translateZ(218px);
+          }
+        }
+      }
+    }
+    i {
+      color: $white;
+      cursor: pointer;
+      position: absolute;
+
+      &.fa-chevron-left {
+        top: 50%;
+        left: 0px;
+        transform: translate(-140px, -50%);
+      }
+      &.fa-chevron-right {
+        top: 50%;
+        right: 0;
+        transform: translate(140px, -50%);
+      }
+    }
+  }
+}

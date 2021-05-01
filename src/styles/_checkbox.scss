@@ -1,0 +1,52 @@
+section#checkbox {
+  width: 100%;
+  height: 240px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  .info {
+    background: linear-gradient(to right, $white, white);
+  }
+
+  .container {
+    @include flex-center;
+    background: white;
+
+    input {
+      display: none;
+
+      & + label {
+        display: block;
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        background-color: rgb(202, 223, 226);
+
+        border-radius: 100px;
+        transition: all 0.4s ease-out;
+
+        &::after {
+          content: "";
+          display: block;
+          position: relative;
+          top: 5px;
+          left: 5px;
+          width: 40px;
+          height: 40px;
+          background-color: rgb(141, 172, 175);
+          border-radius: 9999px;
+          transition: all 0.4s ease-out;
+        }
+      }
+
+      &:checked + label {
+        background-color: rgb(150, 239, 184);
+
+        &::after {
+          background-color: rgb(29, 105, 52);
+          transform: translate(50px);
+        }
+      }
+    }
+  }
+}

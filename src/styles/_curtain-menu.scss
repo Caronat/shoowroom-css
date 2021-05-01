@@ -1,0 +1,64 @@
+section#curtain-menu {
+  width: 100%;
+  height: 240px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  .info {
+    background: linear-gradient(to right, $white, white);
+  }
+
+  .container {
+    @include flex-center;
+
+    #btn-curtain-menu {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 3px 3px 4px rgba(51, 51, 51, 0.5);
+      background: white;
+      cursor: pointer;
+      @include flex-center;
+    }
+
+    #nav-curtain-menu {
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: $black;
+      overflow: hidden;
+      transition: 0.5s;
+      @include flex-center;
+
+      a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 24px;
+        color: $white;
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      #btn-close-curtain-menu {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 30px;
+      }
+
+      .overlay-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

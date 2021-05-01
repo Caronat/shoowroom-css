@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - ShowRoom</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- CAROUSEL MENU -->
+    <section id="carousel-menu">
+      <div class="carousel-menu">
+        <div class="carousel">
+          <a href="#checkbox" class="carousel-cell" onclick="rotateCarousel(0)">
+            Checkbox
+          </a>
+          <a
+            href="#svg-loader"
+            class="carousel-cell"
+            onclick="rotateCarousel(1)"
+          >
+            SVG loader
+          </a>
+          <a
+            href="#flip-card"
+            class="carousel-cell"
+            onclick="rotateCarousel(2)"
+          >
+            Flip Card
+          </a>
+          <a
+            href="#points-loader"
+            class="carousel-cell"
+            onclick="rotateCarousel(3)"
+          >
+            Points loader
+          </a>
+          <a href="#hover" class="carousel-cell" onclick="rotateCarousel(4)">
+            Hover animation
+          </a>
+          <a href="#overlay" class="carousel-cell" onclick="rotateCarousel(5)">
+            Overlay
+          </a>
+          <a
+            href="#curtain-menu"
+            class="carousel-cell"
+            onclick="rotateCarousel(6)"
+          >
+            Curtain menu
+          </a>
+        </div>
+        <i class="fas fa-chevron-left fa-2x"></i>
+        <i class="fas fa-chevron-right fa-2x"></i>
+      </div>
+    </section>
+
+    <!-- CHECKBOX -->
+    <section id="checkbox">
+      <div class="info">
+        <p>checkbox stylized</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/MWjdzRo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+      <div class="container">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+      </div>
+    </section>
+
+    <!-- SVG LOADER -->
+    <section id="svg-loader">
+      <div class="container">
+        <svg width="200" height="200">
+          <circle cx="100" cy="100" r="95" />
+        </svg>
+      </div>
+      <div class="info">
+        <p>loader using animation on svg</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/eYdaQwe"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+    </section>
+
+    <!-- FLIP CARD -->
+    <section id="flip-card">
+      <div class="info">
+        <p>Animation flip card</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/QWKRzLG"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="front">
+            <img src="./src/img/marcos-paulo-prado-uC4Ft-Jqx_8-unsplash.jpg" />
+          </div>
+          <div class="back">
+            <div class="content">
+              <div>
+                Photo by<br />
+                <a
+                  href="http://unsplash.com/@tiomp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Marcos Paulo Prado</a
+                >
+              </div>
+              <div>
+                on<br />
+                <a
+                  href="https://unsplash.com/t/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Unsplash</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POINTS LOADER -->
+    <section id="points-loader">
+      <div class="container">
+        <div class="loader">
+          <span class="dot"></span>
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <p>loader using blur effect</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/XWjwoJE"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+    </section>
+
+    <!-- HOVER -->
+    <section id="hover">
+      <div class="info">
+        <p>Hover effect</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/BaLevzz"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+      <div class="container">
+        <div class="center">
+          <a href="#" class="btn">hover</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERLAY -->
+    <section id="overlay">
+      <div class="param">
+        <input
+          type="radio"
+          name="param"
+          id="overlay1"
+          value="overlay1"
+          checked
+        />
+        <label for="overlay1">overlay1</label>
+        <input type="radio" name="param" id="overlay2" value="overlay2" />
+        <label for="overlay2">overlay2</label>
+        <input type="radio" name="param" id="overlay3" value="overlay3" />
+        <label for="overlay3">overlay3</label>
+      </div>
+      <div class="container overlay1">
+        <div class="card">
+          <img src="./src/img/kamran-ch-pCBaT3qZpTg-unsplash.jpg" />
+          <div class="overlay">
+            <div>
+              Photo by<br />
+              <a
+                href="https://unsplash.com/@kamranch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                >Kamran Ch</a
+              >
+            </div>
+            <div>
+              on<br />
+              <a
+                href="https://unsplash.com/t/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                >Unsplash</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <p>Different kind of overlay effect</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/BaLevzz"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+    </section>
+
+    <!-- CURTAIN MENU -->
+    <section id="curtain-menu">
+      <div class="info">
+        <p>curtain menu</p>
+        <span>
+          <a
+            href="http://codepen.io/caronat/pen/NWRVeNb"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Code source</a
+          >
+        </span>
+      </div>
+      <div class="container">
+        <span id="btn-curtain-menu"
+          ><i class="fas fa-arrow-right fa-2x"></i
+        ></span>
+        <div id="nav-curtain-menu" class="overlay">
+          <a id="btn-close-curtain-menu" href="#curtain-menu" class="closeBtn"
+            ><i class="fas fa-times"></i
+          ></a>
+
+          <div class="overlay-content">
+            <a href="#checkbox" onclick="closeCurtainMenu()"> Checkbox </a>
+            <a href="#svg-loader" onclick="closeCurtainMenu()"> SVG loader </a>
+            <a href="#flip-card" onclick="closeCurtainMenu()"> Flip Card </a>
+            <a href="#points-loader" onclick="closeCurtainMenu()">
+              Points loader
+            </a>
+            <a href="#hover" onclick="closeCurtainMenu()"> Hover animation </a>
+            <a href="#overlay" onclick="closeCurtainMenu()"> Overlay </a>
+            <a href="#curtain-menu" onclick="closeCurtainMenu()">
+              Curtain menu
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
